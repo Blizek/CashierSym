@@ -1,5 +1,6 @@
 package controller;
 
+import features.BackspaceFunction;
 import features.SetCashierType;
 import features.UpdateField;
 import javafx.fxml.FXML;
@@ -41,9 +42,7 @@ public class CashierController {
     public void exitFunction() {System.exit(0);}
 
     public void backspace() {
-        if (fieldNumbers.length() >= 1)
-            fieldNumbers = fieldNumbers.substring(0, fieldNumbers.length() - 1);
-        fieldNumbers = new UpdateField().update(field, "", fieldNumbers);
+        fieldNumbers = new BackspaceFunction().setBackspaceFunction(fieldNumbers, field);
     }
 
     public void setCode() {
