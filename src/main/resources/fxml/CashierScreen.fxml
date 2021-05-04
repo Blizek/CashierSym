@@ -12,7 +12,7 @@
    <children>
       <AnchorPane layoutX="50.0" layoutY="50.0" prefHeight="700.0" prefWidth="420.0" style="-fx-background-color: white;">
          <children>
-            <JFXButton layoutY="610.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #1e9600; -fx-border-color: #ffffff; -fx-border-width: 5;" text="CASH OR CARD" textFill="WHITE">
+            <JFXButton layoutY="610.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #1e9600; -fx-border-color: #ffffff; -fx-border-width: 5;" text="ADD PRODUCT" textFill="WHITE">
                <font>
                   <Font name="Consolas Bold" size="15.0" />
                </font>
@@ -125,7 +125,7 @@
                   <Font name="Consolas Bold" size="20.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="350.0" layoutY="425.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 5;" text="ADD">
+            <JFXButton layoutX="350.0" layoutY="425.0" prefHeight="100.0" prefWidth="100.0" style="-fx-border-color: black; -fx-border-width: 5;" text="&lt;--">
                <font>
                   <Font name="Consolas Bold" size="20.0" />
                </font>
