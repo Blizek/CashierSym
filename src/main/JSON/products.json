@@ -19,5 +19,9 @@
         "price" : 1.79,
         "type" : "amount",
         "code" : "000003"
+    }, {
+        "name" : "6 medium hamburger meat",
+        "price" : 7.99,
+        "type" : "amount",
+        "code" : "000004"
     }
-]

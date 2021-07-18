@@ -1,10 +1,14 @@
 package controller;
 
 import features.BackspaceFunction;
+import features.LoadProductData;
 import features.SetCashierType;
 import features.UpdateField;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import variables.Code;
+
+import java.io.IOException;
 
 
 public class CashierController {
@@ -13,7 +17,7 @@ public class CashierController {
     @FXML
     TextField field;
 
-    private String fieldNumbers = "", type = "code";
+    private String fieldNumbers = "";
 
     public void setMainController(MainController mainController) { CashierController.mainController = mainController; }
 
@@ -46,20 +50,23 @@ public class CashierController {
     }
 
     public void setCode() {
-        String[] data = new SetCashierType().setType("code", field);
-        fieldNumbers = data[0];
-        type = data[1];
+        fieldNumbers = new SetCashierType().setType(field);
     }
 
     public void setMultiplier() {
-        String[] data = new SetCashierType().setType("multiplier", field);
-        fieldNumbers = data[0];
-        type = data[1];
+        Code.setCode(field.getText());
+        fieldNumbers = new SetCashierType().setType(field);
     }
 
     public void setWeight() {
-        String[] data = new SetCashierType().setType("weight", field);
-        fieldNumbers = data[0];
-        type = data[1];
+        Code.setCode(field.getText());
+        fieldNumbers = new SetCashierType().setType(field);;
+    }
+
+    public void add() throws IOException {
+        System.out.println(Code.code + " " + field.getText());
+        LoadProductData.data();
+        Code.setCode("");
+        fieldNumbers = new SetCashierType().setType(field);
     }
 }
