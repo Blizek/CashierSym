@@ -1,0 +1,23 @@
+[
+    {
+        "name" : "red cherries",
+        "price" : 6.90,
+        "type" : "weight",
+        "code" : "000000"
+    }, {
+        "name" : "sweet roll with cheese",
+        "price" : 1.99,
+        "type" : "amount",
+        "code" : "000001"
+    }, {
+        "name" : "smoked mackerel kg",
+        "price" : 19.99,
+        "type" : "weight",
+        "code" : "000002"
+    }, {
+        "name" : "donut with pomade 70g",
+        "price" : 1.79,
+        "type" : "amount",
+        "code" : "000003"
+    }
+]

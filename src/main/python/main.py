@@ -1,28 +1,12 @@
-class Basket:
-    summarise = 0
-    product_name, type = "", ""
-
-    def __init__(self, L):
-        self.L = L
-
-    def add(self, product):
-        self.L.append(product)
-
-    def remove(self, product_ID):
-        self.L.pop(product_ID)
-
-    def add_to_sum(self, product):
-        self.summarise += product.price
-        return self.summarise
-
-    def product_type(self, product):
-        self.product_name = product.name
-        return self.product_name
-
-    def check_type(self, product):
-        self.type = product.type_of_product
-        return self.type
-
-
-
-
+# import features.load_products as load
+# import products.list_of_products as products_list
+# import products.list_of_ID as ID_list
+#
+#
+# if __name__ == "__main__":
+#     load.load()
+#     if "000001" in ID_list.ID_list:
+#         index_product = ID_list.ID_list.index("000001")
+#         product = products_list.products_list[index_product]
+#         print(product.name)
+# TEST TEST TEST TEST TEST TEST
