@@ -1,9 +1,6 @@
 package controller;
 
-import features.BackspaceFunction;
-import features.LoadProductData;
-import features.SetCashierType;
-import features.UpdateField;
+import features.*;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import variables.Code;
@@ -64,7 +61,7 @@ public class CashierController {
     }
 
     public void add() throws IOException {
-        System.out.println(Code.code + " " + field.getText());
+        new LoadCodeAndValue().saveData(Code.code, Double.parseDouble(field.getText()));
         LoadProductData.data();
         Code.setCode("");
         fieldNumbers = new SetCashierType().setType(field);

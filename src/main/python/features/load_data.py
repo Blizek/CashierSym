@@ -9,6 +9,6 @@ def load_product_data(ID, value):
         index_product = ID_list.ID_list.index(ID)
         product = products_list.products_list[index_product]
         name, price = product.name, product.price
-        data_info = name, str(value) + "*" + str(price)
+        data_info = name + " " + str(value) + "*" + str(price)
         cost = str(round(price * value, 2))
         return [data_info, cost]
