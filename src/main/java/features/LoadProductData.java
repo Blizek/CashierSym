@@ -1,5 +1,6 @@
 package features;
 
+import variables.ListOfProducts;
 import variables.Localization;
 
 import java.io.BufferedReader;
@@ -12,8 +13,7 @@ public class LoadProductData {
 
     public static void data() throws IOException {
         String filePath = Localization.PYTHON_FILE;
-        String interpreterPath = Localization.PYTHON_INTERPRETER_LOCALIZATION;
-        ProcessBuilder pb = new ProcessBuilder().command(interpreterPath, filePath, "get_product");
+        ProcessBuilder pb = new ProcessBuilder().command("python", filePath, "get_product");
         Process p = pb.start();
         BufferedReader in = new BufferedReader(new InputStreamReader(p.getInputStream()));
         List<String> productData = new ArrayList<>();
@@ -21,7 +21,7 @@ public class LoadProductData {
         while ((line = in.readLine()) != null) {
             productData.add(line);
         }
-        System.out.println(productData);
+        ListOfProducts.purchasedProducts.add(productData);
         in.close();
     }
 }

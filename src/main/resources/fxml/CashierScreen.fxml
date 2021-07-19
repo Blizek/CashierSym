@@ -17,27 +17,32 @@
                   <Font name="Consolas Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="280.0" layoutY="610.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #b50909; -fx-border-color: #ffffff; -fx-border-width: 5;" text="PRINT RECEIPT" textFill="WHITE">
+            <JFXButton layoutX="280.0" layoutY="610.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #2d4cd6; -fx-border-color: #ffffff; -fx-border-width: 5;" text="PRINT RECEIPT" textFill="WHITE">
                <font>
                   <Font name="Consolas Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="140.0" layoutY="610.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #1e9600; -fx-border-color: #ffffff; -fx-border-width: 5;" text="DELETE" textFill="WHITE">
+            <JFXButton layoutX="140.0" layoutY="610.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #b50909; -fx-border-color: #ffffff; -fx-border-width: 5;" text="DELETE" textFill="WHITE">
                <font>
                   <Font name="Consolas Bold" size="15.0" />
                </font>
             </JFXButton>
             <AnchorPane prefHeight="133.0" prefWidth="420.0" style="-fx-background-color: #75767d;">
                <children>
-                  <Text layoutX="326.0" layoutY="44.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUM:">
+                  <Text fx:id="sum" layoutX="5.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUM: $7.99" textAlignment="RIGHT" wrappingWidth="410.921875">
                      <font>
                         <Font name="Consolas" size="40.0" />
                      </font>
                   </Text>
+                  <Text fx:id="codeError" fill="#b50909" layoutX="5.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="There is no product with that code! Please type another product code." textAlignment="CENTER" visible="false" wrappingWidth="410.921875">
+                     <font>
+                        <Font name="Consolas" size="20.0" />
+                     </font>
+                  </Text>
                </children></AnchorPane>
-            <ScrollPane layoutY="133.0" prefHeight="475.0" prefWidth="420.0">
+            <ScrollPane fx:id="scroll" layoutY="133.0" prefHeight="475.0" prefWidth="420.0">
               <content>
-                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="418.0" style="-fx-background-color: #a0a2ab;" />
+                <AnchorPane fx:id="scrollPane" minHeight="0.0" minWidth="0.0" prefHeight="473.0" prefWidth="418.0" style="-fx-background-color: #a0a2ab;" />
               </content>
             </ScrollPane>
          </children>
