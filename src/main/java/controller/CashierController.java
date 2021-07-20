@@ -10,6 +10,7 @@ import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import variables.Code;
 import variables.ListOfProducts;
+import variables.Total;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -82,6 +83,7 @@ public class CashierController {
         LoadProductData.data();
         Code.setCode("");
         fieldNumbers = new SetCashierType().setType(field);
+        Total.add(Double.parseDouble(ListOfProducts.purchasedProducts.get(ListOfProducts.purchasedProducts.size() - 1).get(1)));
         loadListOfProducts();
     }
 
@@ -94,6 +96,8 @@ public class CashierController {
             scroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.ALWAYS);
             scroll.setHbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         }
+
+        scrollPane.getChildren().clear();
 
         int YPosition = 10;
         for (int i = 0; i < products.size(); i++) {
@@ -113,13 +117,11 @@ public class CashierController {
             }
             info.setFont(Font.font("Consolas", 20));
             info.setWrappingWidth(265);
-            info.wrappingWidthProperty().set(265);
             info.setTextAlignment(TextAlignment.LEFT);
 
             Text cost = new Text(290, 34, "$" + products.get(i).get(1));
             cost.setFont(Font.font("Consolas", 20));
             cost.setWrappingWidth(100);
-            cost.wrappingWidthProperty().set(100);
             cost.setTextAlignment(TextAlignment.RIGHT);
 
             pane.getChildren().add(info);
@@ -128,5 +130,12 @@ public class CashierController {
             scrollPane.getChildren().add(pane);
             YPosition += 70;
         }
+        UpdateTotal.updateTotalField(sum);
+    }
+
+    public void deleteProduct() {
+        Total.remove(Double.parseDouble(ListOfProducts.purchasedProducts.get(ListOfProducts.purchasedProducts.size() - 1).get(1)));
+        ListOfProducts.purchasedProducts.remove(ListOfProducts.purchasedProducts.size() - 1);
+        loadListOfProducts();
     }
 }

@@ -22,14 +22,14 @@
                   <Font name="Consolas Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="140.0" layoutY="610.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #b50909; -fx-border-color: #ffffff; -fx-border-width: 5;" text="DELETE" textFill="WHITE">
+            <JFXButton layoutX="140.0" layoutY="610.0" onAction="#deleteProduct" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #b50909; -fx-border-color: #ffffff; -fx-border-width: 5;" text="DELETE" textFill="WHITE">
                <font>
                   <Font name="Consolas Bold" size="15.0" />
                </font>
             </JFXButton>
             <AnchorPane prefHeight="133.0" prefWidth="420.0" style="-fx-background-color: #75767d;">
                <children>
-                  <Text fx:id="sum" layoutX="5.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUM: $7.99" textAlignment="RIGHT" wrappingWidth="410.921875">
+                  <Text fx:id="sum" layoutX="5.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="SUM: $0.00" textAlignment="RIGHT" wrappingWidth="410.921875">
                      <font>
                         <Font name="Consolas" size="40.0" />
                      </font>
