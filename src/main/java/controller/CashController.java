@@ -5,7 +5,10 @@ import features.UpdateField;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import routings.ReceiptMain;
 import variables.Total;
+
+import java.io.IOException;
 
 public class CashController {
     public static MainSecondController mainSecondController;
@@ -46,13 +49,14 @@ public class CashController {
         fieldNumbers = new BackspaceFunction().setBackspaceFunction(fieldNumbers, cash);
     }
 
-    public void submit(){
+    public void submit() throws IOException {
         double cash_value = Double.parseDouble(cash.getText());
 
         if (cash_value < Total.total)
             error.setVisible(true);
         else {
             error.setVisible(false);
+            new ReceiptMain().runThis();
         }
     }
 }

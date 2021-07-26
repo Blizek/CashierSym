@@ -1,7 +1,10 @@
 package controller;
 
+import routings.ReceiptMain;
 import routings.SetCashScreen;
 import variables.TypeOfPayment;
+
+import java.io.IOException;
 
 public class PaymentMethodController {
 
@@ -16,7 +19,8 @@ public class PaymentMethodController {
         new SetCashScreen().runThis(mainSecondController);
     }
 
-    public void card() {
+    public void card() throws IOException {
         TypeOfPayment.card = true;
+        new ReceiptMain().runThis();
     }
 }
