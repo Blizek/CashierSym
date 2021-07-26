@@ -8,6 +8,8 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
+import routings.PaymentMain;
+import routings.SetPaymentMethodScreen;
 import variables.Code;
 import variables.ListOfProducts;
 import variables.Total;
@@ -134,8 +136,14 @@ public class CashierController {
     }
 
     public void deleteProduct() {
-        Total.remove(Double.parseDouble(ListOfProducts.purchasedProducts.get(ListOfProducts.purchasedProducts.size() - 1).get(1)));
-        ListOfProducts.purchasedProducts.remove(ListOfProducts.purchasedProducts.size() - 1);
-        loadListOfProducts();
+        if (ListOfProducts.purchasedProducts.size() > 0) {
+            Total.remove(Double.parseDouble(ListOfProducts.purchasedProducts.get(ListOfProducts.purchasedProducts.size() - 1).get(1)));
+            ListOfProducts.purchasedProducts.remove(ListOfProducts.purchasedProducts.size() - 1);
+            loadListOfProducts();
+        }
+    }
+
+    public void print() throws IOException {
+        new PaymentMain().runThis();
     }
 }

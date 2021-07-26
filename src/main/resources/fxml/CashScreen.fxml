@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #a0a2ab;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.CashController">
+   <children>
+      <Text fill="WHITE" layoutX="70.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Enter how much money has been paid">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="cash" alignment="CENTER_RIGHT" editable="false" layoutX="87.0" layoutY="82.0" prefHeight="72.0" prefWidth="236.0" style="-fx-background-radius: 15;" text="0">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font></TextField>
+      <JFXButton layoutX="80.0" layoutY="183.0" onAction="#add7" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="7">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="230.0" layoutY="183.0" onAction="#add8" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="8">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="380.0" layoutY="183.0" onAction="#add9" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="9">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="530.0" layoutY="183.0" onAction="#backspace" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="&lt;-">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="80.0" layoutY="280.0" onAction="#add4" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="4">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="230.0" layoutY="280.0" onAction="#add5" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="5">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="380.0" layoutY="280.0" onAction="#add6" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="6">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="530.0" layoutY="280.0" onAction="#addPoint" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text=".">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="80.0" layoutY="380.0" onAction="#add1" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="1">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="230.0" layoutY="380.0" onAction="#add2" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="2">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="380.0" layoutY="380.0" onAction="#add3" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="3">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="530.0" layoutY="380.0" onAction="#add0" prefHeight="90.0" prefWidth="90.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="0">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="384.0" layoutY="73.0" onAction="#submit" prefHeight="90.0" prefWidth="236.0" style="-fx-background-color: #a0a296; -fx-border-color: #000000; -fx-border-width: 5;" text="SUBMIT">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </JFXButton>
+      <Text fx:id="error" fill="RED" layoutX="218.0" layoutY="179.0" strokeType="OUTSIDE" strokeWidth="0.0" text="This is to less money! Type more money" visible="false">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

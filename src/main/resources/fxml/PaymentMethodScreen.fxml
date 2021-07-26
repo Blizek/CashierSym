@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #a0a2ab;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.PaymentMethodController">
+   <children>
+      <Text fill="WHITE" layoutX="177.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose payment method" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas Bold" size="30.0" />
+         </font>
+      </Text>
+      <JFXButton layoutX="60.0" layoutY="159.0" onAction="#cash" prefHeight="250.0" prefWidth="250.0" style="-fx-border-color: #000000; -fx-border-width: 5; -fx-background-color: #a0a296;" text="CASH" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas" size="40.0" />
+         </font>
+      </JFXButton>
+      <JFXButton layoutX="390.0" layoutY="159.0" onAction="#card" prefHeight="250.0" prefWidth="250.0" style="-fx-border-color: #000000; -fx-border-width: 5; -fx-background-color: #a0a296;" text="CARD" textAlignment="CENTER">
+         <font>
+            <Font name="Consolas" size="40.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>

@@ -17,7 +17,7 @@
                   <Font name="Consolas Bold" size="15.0" />
                </font>
             </JFXButton>
-            <JFXButton layoutX="280.0" layoutY="610.0" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #2d4cd6; -fx-border-color: #ffffff; -fx-border-width: 5;" text="PRINT RECEIPT" textFill="WHITE">
+            <JFXButton layoutX="280.0" layoutY="610.0" onAction="#print" prefHeight="100.0" prefWidth="140.0" style="-fx-background-color: #2d4cd6; -fx-border-color: #ffffff; -fx-border-width: 5;" text="PRINT RECEIPT" textFill="WHITE">
                <font>
                   <Font name="Consolas Bold" size="15.0" />
                </font>
