@@ -103,34 +103,41 @@ public class CashierController {
 
         int YPosition = 10;
         for (int i = 0; i < products.size(); i++) {
-            AnchorPane pane = new AnchorPane();
-            pane.setMaxWidth(400);
-            pane.setMinWidth(400);
-            pane.setMaxHeight(60);
-            pane.setMinHeight(60);
-            pane.setLayoutX(4);
-            pane.setLayoutY(YPosition);
-            pane.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 5");
-
-            Text info = new Text(14, 34, products.get(i).get(0));
-            if (products.get(i).get(0).length() > 22) {
-                String newData = ShorterText.shorter(products.get(i).get(0));
-                info.setText(newData);
+            if (products.get(i).get(0).equals("There is no product with that value")) {
+                codeError.setVisible(true);
+                ListOfProducts.purchasedProducts.remove(i);
             }
-            info.setFont(Font.font("Consolas", 20));
-            info.setWrappingWidth(265);
-            info.setTextAlignment(TextAlignment.LEFT);
+            else {
+                codeError.setVisible(false);
+                AnchorPane pane = new AnchorPane();
+                pane.setMaxWidth(400);
+                pane.setMinWidth(400);
+                pane.setMaxHeight(60);
+                pane.setMinHeight(60);
+                pane.setLayoutX(4);
+                pane.setLayoutY(YPosition);
+                pane.setStyle("-fx-background-color: #ffffff; -fx-border-color: #000000; -fx-border-width: 5");
 
-            Text cost = new Text(290, 34, "$" + products.get(i).get(1));
-            cost.setFont(Font.font("Consolas", 20));
-            cost.setWrappingWidth(100);
-            cost.setTextAlignment(TextAlignment.RIGHT);
+                Text info = new Text(14, 34, products.get(i).get(0));
+                if (products.get(i).get(0).length() > 22) {
+                    String newData = ShorterText.shorter(products.get(i).get(0));
+                    info.setText(newData);
+                }
+                info.setFont(Font.font("Consolas", 20));
+                info.setWrappingWidth(265);
+                info.setTextAlignment(TextAlignment.LEFT);
 
-            pane.getChildren().add(info);
-            pane.getChildren().add(cost);
+                Text cost = new Text(290, 34, "$" + products.get(i).get(1));
+                cost.setFont(Font.font("Consolas", 20));
+                cost.setWrappingWidth(100);
+                cost.setTextAlignment(TextAlignment.RIGHT);
 
-            scrollPane.getChildren().add(pane);
-            YPosition += 70;
+                pane.getChildren().add(info);
+                pane.getChildren().add(cost);
+
+                scrollPane.getChildren().add(pane);
+                YPosition += 70;
+            }
         }
         UpdateTotal.updateTotalField(sum);
     }

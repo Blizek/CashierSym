@@ -8,5 +8,7 @@ public class CashAndChange {
     public void setAll(double value) {
         cash = value;
         change = cash - Total.total;
+
+        change = Math.round(change * 100.0) / 100.0;
     }
 }

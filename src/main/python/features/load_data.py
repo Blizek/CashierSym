@@ -4,7 +4,7 @@ import products.list_of_products as products_list
 
 def load_product_data(ID, value):
     if ID not in ID_list.ID_list:
-        return ["There is no product with that value", -1]
+        return ["There is no product with that value", 0]
     else:
         index_product = ID_list.ID_list.index(ID)
         product = products_list.products_list[index_product]
