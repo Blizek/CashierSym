@@ -7,6 +7,7 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
+import routings.SetCashierScreen;
 import variables.CashAndChange;
 import variables.ListOfProducts;
 import variables.Total;
@@ -24,6 +25,7 @@ public class ReceiptController {
 
     public void initialize() {
         loadComponents();
+        clearAll();
     }
 
     private void loadComponents() {
@@ -165,5 +167,16 @@ public class ReceiptController {
             scroll.setMaxHeight(receiptHeight + 5);
             scroll.setVbarPolicy(ScrollPane.ScrollBarPolicy.NEVER);
         }
+    }
+
+    private void clearAll() {
+        Total.total = 0.0;
+
+        TypeOfPayment.cash = false;
+        TypeOfPayment.card = false;
+
+        ListOfProducts.purchasedProducts.clear();
+
+        new SetCashierScreen().runThis(CashierController.mainController);
     }
 }
