@@ -1,5 +1,6 @@
 package controller;
 
+import routings.PaymentMain;
 import routings.ReceiptMain;
 import routings.SetCashScreen;
 import variables.TypeOfPayment;
@@ -21,6 +22,7 @@ public class PaymentMethodController {
 
     public void card() throws IOException {
         TypeOfPayment.card = true;
+        new PaymentMain().closeStage();
         new ReceiptMain().runThis();
     }
 }

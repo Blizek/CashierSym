@@ -144,6 +144,7 @@ public class CashierController {
     }
 
     public void print() throws IOException {
-        new PaymentMain().runThis();
+        if (ListOfProducts.purchasedProducts.size() > 0)
+            new PaymentMain().runThis();
     }
 }

@@ -9,13 +9,14 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class PaymentMain {
+    public static Stage stage = new Stage();
+
     public void runThis() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(this.getClass().getResource("/fxml/MainSecondScreen.fxml"));
 
         AnchorPane anchorPane = loader.load();
 
-        Stage stage = new Stage();
         Scene scene = new Scene(anchorPane);
         stage.setScene(scene);
         stage.setTitle("Choose payment method");
@@ -24,5 +25,9 @@ public class PaymentMain {
         stage.setAlwaysOnTop(true);
 
         stage.show();
+    }
+
+    public void closeStage() {
+        stage.close();
     }
 }

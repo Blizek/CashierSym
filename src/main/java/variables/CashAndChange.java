@@ -5,7 +5,8 @@ public class CashAndChange {
 
     public static double change = 0.0;
 
-    public static void setChange(double total) {
-        change = cash - total;
+    public void setAll(double value) {
+        cash = value;
+        change = cash - Total.total;
     }
 }

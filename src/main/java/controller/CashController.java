@@ -5,7 +5,9 @@ import features.UpdateField;
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
+import routings.PaymentMain;
 import routings.ReceiptMain;
+import variables.CashAndChange;
 import variables.Total;
 
 import java.io.IOException;
@@ -56,6 +58,8 @@ public class CashController {
             error.setVisible(true);
         else {
             error.setVisible(false);
+            new CashAndChange().setAll(cash_value);
+            new PaymentMain().closeStage();
             new ReceiptMain().runThis();
         }
     }
