@@ -10,6 +10,7 @@ public class Main extends Application {
         launch(args);
     }
 
+    // Creating cash register stage
     public void start(Stage stage) throws Exception {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(this.getClass().getResource("/fxml/MainScreen.fxml"));

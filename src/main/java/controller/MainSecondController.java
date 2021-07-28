@@ -5,6 +5,7 @@ import javafx.scene.layout.AnchorPane;
 import routings.SetPaymentMethodScreen;
 
 public class MainSecondController {
+    // Payment method main controller
     @FXML
     AnchorPane mainAnchorPane;
 

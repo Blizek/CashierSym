@@ -9,7 +9,6 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextAlignment;
 import routings.PaymentMain;
-import routings.SetPaymentMethodScreen;
 import variables.Code;
 import variables.ListOfProducts;
 import variables.Total;

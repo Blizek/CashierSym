@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class PaymentMain {
+    // Creating payment method stage
     public static Stage stage = new Stage();
 
     public void runThis() throws IOException {

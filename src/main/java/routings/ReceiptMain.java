@@ -10,6 +10,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class ReceiptMain {
+    // Creating receipt stage
+
     public void runThis() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(this.getClass().getResource("/fxml/ReceiptScreen.fxml"));
